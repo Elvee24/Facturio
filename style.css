@@ -117,7 +117,7 @@ header {
 }
 
 .download-btn.mac {
-    background-color: #444;
+    background-color: #B0B0B0;
     border: 1px solid #666;
 }
 
@@ -126,13 +126,13 @@ header {
 }
 
 .download-btn.linux {
-    background-color: #333;
-    border: 1px solid #555;
+    background-color: #1F1F1F;
+    border: 1px solid #1F1F1F;
 }
 
 .download-btn.linux:hover {
-    background-color: #e95420;
-    border-color: #e95420;
+    background-color: #FFF463;
+    border-color: #FFF463;
 }
 
 .download-icon img {

@@ -118,10 +118,13 @@ header {
 }
 
 .app-preview {
-    max-width: 600px; margin: 0 auto;
+    max-width: 600px;
+    margin: 40px auto 0;
     border: 10px solid var(--text-primary);
-    border-radius: 12px; background-color: var(--text-primary);
-    position: relative; margin-top: -30px; opacity: 0.9;
+    border-radius: 12px;
+    background-color: var(--text-primary);
+    position: relative;
+    opacity: 0.9;
 }
 
 .preview-screen { 

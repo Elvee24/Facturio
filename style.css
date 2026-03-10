@@ -141,7 +141,6 @@ header {
     height: auto; 
     margin-bottom: 5px;
     min-width: 5px;
-    box-shadow: none;
 }
 
 .download-btn.windows .download-icon img {
@@ -150,6 +149,7 @@ header {
 
 .download-btn.mac .download-icon img,
 .download-btn.linux .download-icon img {
+    max-width: 28px;
     filter: drop-shadow(2px 2px 1px rgba(0,0,0,0.5));
 }
 

@@ -141,23 +141,16 @@ header {
     height: auto; 
     margin-bottom: 5px;
     min-width: 5px;
+    box-shadow: none;
+}
+
+.download-btn.windows .download-icon img {
     box-shadow: 2px 2px 1px black;
 }
 
-.download-icon.mac img {
-    max-width: 20px; 
-    width: 100%; 
-    height: auto; 
-    margin-bottom: 5px;
-    min-width: 5px;
-}
-
-.download-icon.linux img {
-    max-width: 20px; 
-    width: 100%; 
-    height: auto; 
-    margin-bottom: 5px;
-    min-width: 5px;
+.download-btn.mac .download-icon img,
+.download-btn.linux .download-icon img {
+    filter: drop-shadow(2px 2px 1px rgba(0,0,0,0.5));
 }
 
 .features { 

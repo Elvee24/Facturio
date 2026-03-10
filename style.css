@@ -89,13 +89,12 @@ header {
     letter-spacing: -2px; 
 }
 
-.download-icon img {
-    max-width: 20px; 
-    width: 100%; 
-    height: auto; 
-    margin-bottom: 5px;
-    min-width: 5px;
-    box-shadow: 2px 2px 1px black;
+.download-group {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
 }
 
 .download-btn {
@@ -115,6 +114,34 @@ header {
 .download-btn:hover { 
     transform: translateY(-3px); 
     background: var(--accent-hover); 
+}
+
+.download-btn.mac {
+    background-color: #444;
+    border: 1px solid #666;
+}
+
+.download-btn.mac:hover {
+    background-color: #555;
+}
+
+.download-btn.linux {
+    background-color: #333;
+    border: 1px solid #555;
+}
+
+.download-btn.linux:hover {
+    background-color: #e95420;
+    border-color: #e95420;
+}
+
+.download-icon img {
+    max-width: 20px; 
+    width: 100%; 
+    height: auto; 
+    margin-bottom: 5px;
+    min-width: 5px;
+    box-shadow: 2px 2px 1px black;
 }
 
 .features { 

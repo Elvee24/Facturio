@@ -3,19 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Awesome App</title>
+    <title>Facturio | Billing & Invoicing</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
 </head>
-<body>
-    <section class="hero">
-        <h1>Meet [App Name]</h1>
-        <p>The simplest way to manage your tasks in 2026.</p>
-        
-        <a href="your-app-file.zip" class="download-btn">Download Now</a>
-        
-        <div class="preview-image">
-            <img src="app-screenshot.png" alt="App Preview">
-        </div>
-    </section>
+<body data-theme="dark" data-lang="en">
+
+    <main class="container">
+        <header>
+            <div class="logo-area">
+                <span class="logo-icon">📊</span>
+                <h1>Facturio</h1>
+            </div>
+            <div class="controls">
+                <button class="lang-toggle" id="lang-toggle">PT</button>
+                <button class="theme-toggle" id="theme-toggle"></button>
+            </div>
+        </header>
+
+        <section class="hero">
+            <p class="tagline" data-en="Invoicing should feel smooth." data-pt="Faturar deve ser simples."></p>
+            <p class="sub-tagline" 
+               data-en="Facturio streamlines your entire billing lifecycle, allowing you to focus on growth." 
+               data-pt="O Facturio simplifica todo o seu ciclo de faturação, permitindo que se foque no crescimento."></p>
+            
+            <a href="FacturioSetup.exe" class="download-btn">
+                <span class="download-icon">📥</span>
+                <span data-en="Download for Windows" data-pt="Descarregar para Windows"></span>
+            </a>
+        </section>
+
+        <section class="app-preview">
+            <div class="preview-screen">
+                <div class="preview-header"></div>
+                <div class="p-block p-title"></div>
+                <div class="p-block p-row"></div>
+                <div class="p-block p-chart"></div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="feature-card">
+                <span class="feature-icon">✨</span>
+                <h3 data-en="Instant Setup" data-pt="Configuração Instantânea"></h3>
+                <p data-en="Configured for 2026." data-pt="Configurado para 2026."></p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">🔒</span>
+                <h3 data-en="Secure" data-pt="Seguro"></h3>
+                <p data-en="Bank-grade encryption." data-pt="Encriptação bancária."></p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">📊</span>
+                <h3 data-en="Pro Dashboard" data-pt="Painel Profissional"></h3>
+                <p data-en="Visual analytics." data-pt="Análises visuais."></p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const body = document.body;
+        const themeBtn = document.getElementById('theme-toggle');
+        const langBtn = document.getElementById('lang-toggle');
+
+        // Theme Logic
+        themeBtn.addEventListener('click', () => {
+            const newTheme = body.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+            body.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+        });
+
+        // Language Logic
+        const updateText = (lang) => {
+            document.querySelectorAll('[data-en]').forEach(el => {
+                el.textContent = el.getAttribute(`data-${lang}`);
+            });
+            langBtn.textContent = lang === 'en' ? 'PT' : 'EN';
+        };
+
+        langBtn.addEventListener('click', () => {
+            const newLang = body.getAttribute('data-lang') === 'en' ? 'pt' : 'en';
+            body.setAttribute('data-lang', newLang);
+            updateText(newLang);
+            localStorage.setItem('lang', newLang);
+        });
+
+        // Init
+        const savedLang = localStorage.getItem('lang') || 'en';
+        body.setAttribute('data-lang', savedLang);
+        updateText(savedLang);
+    </script>
 </body>
 </html>

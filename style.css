@@ -94,7 +94,8 @@ header {
     width: 100%; 
     height: auto; 
     margin-bottom: 5px;
-    min-width: 5px; 
+    min-width: 5px;
+    box-shadow: 2px 2px 1px black;
 }
 
 .download-btn {
@@ -108,6 +109,7 @@ header {
     text-decoration: none;
     font-weight: 700;
     transition: var(--transition);
+    text-shadow: 3px 2px 2px  black;
 }
 
 .download-btn:hover { 

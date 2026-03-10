@@ -33,14 +33,35 @@
             </a>
         </section>
 
-        <section class="app-preview">
-            <div class="preview-screen">
-                <div class="preview-header"></div>
-                <div class="p-block p-title"></div>
-                <div class="p-block p-row"></div>
-                <div class="p-block p-chart"></div>
+       <section class="preview-container">
+        <div class="laptop">
+            <div class="laptop-screen">
+                <div class="app-ui-desktop">
+                    <div class="sidebar"></div>
+                    <div class="main-content">
+                        <div class="chart-line"></div>
+                            <div class="stats-row">
+                            <div class="stat-card"></div>
+                            <div class="stat-card"></div>
+                    </div>
+                </div>
             </div>
-        </section>
+        </div>
+        <div class="laptop-base"></div>
+    </div>
+
+    <div class="phone">
+        <div class="phone-screen">
+            <div class="app-ui-mobile">
+                <div class="mobile-header"></div>
+                <div class="mobile-invoice"></div>
+                <div class="mobile-invoice"></div>
+                <div class="mobile-button"></div>
+            </div>
+        </div>
+        <div class="phone-button"></div>
+    </div>
+</section>
 
         <section class="features">
             <div class="feature-card">
@@ -66,14 +87,14 @@
         const themeBtn = document.getElementById('theme-toggle');
         const langBtn = document.getElementById('lang-toggle');
 
-        // Theme Logic
+        // Theme JS
         themeBtn.addEventListener('click', () => {
             const newTheme = body.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
             body.setAttribute('data-theme', newTheme);
             localStorage.setItem('theme', newTheme);
         });
 
-        // Language Logic
+        // Language JS
         const updateText = (lang) => {
             document.querySelectorAll('[data-en]').forEach(el => {
                 el.textContent = el.getAttribute(`data-${lang}`);
@@ -87,8 +108,7 @@
             updateText(newLang);
             localStorage.setItem('lang', newLang);
         });
-
-        // Init
+        
         const savedLang = localStorage.getItem('lang') || 'en';
         body.setAttribute('data-lang', savedLang);
         updateText(savedLang);

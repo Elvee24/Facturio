@@ -33,22 +33,6 @@ body {
     transition: var(--transition);
 }
 
-body[data-theme="light"] .dark-image, body:not([data-theme="dark"]) .dark-image {
-    display: none;
-}
-
-body[data-theme="light"] .light-image, body:not([data-theme="dark"]) .light-image {
-    display: block;
-}
-
-body[data-theme="dark"] .light-image {
-    display: none;
-}
-
-body[data-theme="dark"] .dark-image {
-    display: block;
-}
-
 h1, h2 { 
     font-family: 'Space Grotesk', sans-serif;
     margin: 0; 
@@ -248,39 +232,6 @@ header {
     padding: 10px;
 }
 
-.laptop-screen img,
-.phone-screen img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
-.sidebar {
-    width: 25%;
-    background: var(--bg-color);
-    border-right: 1px solid var(--border-color); 
-}
-.main-content { 
-    flex: 1; 
-    padding: 20px; 
-}
-
-.chart-line { 
-    height: 100px; 
-    background: var(--accent);
-    opacity: 0.1; 
-    border-radius: 8px;
-    margin-bottom: 20px; 
-}
-
-.stat-card { 
-    height: 60px;
-    background: var(--bg-color);
-    border: 1px solid var(--border-color);
-    margin-bottom: 10px; 
-    border-radius: 8px; 
-}
-
 .app-ui-mobile { 
     display: flex; 
     flex-direction: column; 
@@ -305,6 +256,35 @@ header {
     background: var(--accent);
     border-radius: 20px;
     margin-top: auto; 
+}
+
+.laptop-screen, .phone-screen {
+    position: relative;
+    padding: 0;
+    display: block;
+}
+
+.laptop-screen img, 
+.phone-screen img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+}
+
+[data-theme="dark"] .dark-image {
+    display: block !important;
+}
+
+[data-theme="light"] .light-image {
+    display: block !important;
+}
+
+body:not([data-theme]) .light-image {
+    display: block;
 }
 
 /* Language Controls/Toggle */

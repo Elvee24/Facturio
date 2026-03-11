@@ -273,15 +273,15 @@ header {
     height: 100%;
 }
 
-[data-theme="dark"] .dark-image {
+[data-theme="dark"] .desktop-dark-image {
     display: block !important;
 }
 
-[data-theme="light"] .light-image {
+[data-theme="light"] .desktop-light-image {
     display: block !important;
 }
 
-body:not([data-theme]) .light-image {
+body:not([data-theme]) .desktop-light-image {
     display: block;
 }
 

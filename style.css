@@ -233,7 +233,9 @@ header {
 }
 
 .desktop-dark-image, 
-.desktop-light-image {
+.desktop-light-image,
+.mobile-dark-image,
+.mobile-light-image {
     display: none;
     position: absolute;
     top: 0;

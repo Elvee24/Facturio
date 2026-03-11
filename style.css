@@ -253,6 +253,14 @@ header {
     display: block;
 }
 
+[data-theme="dark"] .mobile-dark-image {
+    display: block;
+}
+
+[data-theme="light"] .mobile-light-image {
+    display: block;
+}
+
 /* Language Controls/Toggle */
 
 .controls {

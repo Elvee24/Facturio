@@ -248,10 +248,11 @@ header {
     padding: 10px;
 }
 
-.app-ui-desktop {
-    display: flex;
-    height: 100%;
-    background: var(--container-bg);
+.laptop-screen img,
+.phone-screen img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 .sidebar {
@@ -263,6 +264,7 @@ header {
     flex: 1; 
     padding: 20px; 
 }
+
 .chart-line { 
     height: 100px; 
     background: var(--accent);
@@ -270,6 +272,7 @@ header {
     border-radius: 8px;
     margin-bottom: 20px; 
 }
+
 .stat-card { 
     height: 60px;
     background: var(--bg-color);

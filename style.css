@@ -33,6 +33,22 @@ body {
     transition: var(--transition);
 }
 
+body[data-theme="light"] .dark-image, body:not([data-theme="dark"]) .dark-image {
+    display: none;
+}
+
+body[data-theme="light"] .light-image, body:not([data-theme="dark"]) .light-image {
+    display: block;
+}
+
+body[data-theme="dark"] .light-image {
+    display: none;
+}
+
+body[data-theme="dark"] .dark-image {
+    display: block;
+}
+
 h1, h2 { 
     font-family: 'Space Grotesk', sans-serif;
     margin: 0; 

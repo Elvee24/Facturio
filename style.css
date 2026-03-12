@@ -157,8 +157,15 @@ header {
     box-shadow: 2px 2px 1px black !important;
 }
 
+.download-btn.windows .download-icon img {
+    box-shadow: 2px 2px 1px rgba(0,0,0,0.5) !important;
+}
+
 .download-btn.mac .download-icon img,
-.download-btn.linux .download-icon img
+.download-btn.linux .download-icon img {
+    max-width: 28px;
+    filter: drop-shadow(2px 2px 1px rgba(0,0,0,0.5));
+}
 .download-btn.android .download-icon img {
     max-width: 28px;
     filter: drop-shadow(2px 2px 1px rgba(0,0,0,0.5));

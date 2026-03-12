@@ -344,14 +344,4 @@ header {
         font-size: 2.4rem; 
         padding: 0 15px;
     }
-
-    .download-group {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .download-btn {
-        justify-content: center;
-        width: 100%;
-    }
 }

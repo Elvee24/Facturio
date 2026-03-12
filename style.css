@@ -158,7 +158,8 @@ header {
 }
 
 .download-btn.mac .download-icon img,
-.download-btn.linux .download-icon img {
+.download-btn.linux .download-icon img
+.download-btn.android .download-icon img {
     max-width: 28px;
     filter: drop-shadow(2px 2px 1px rgba(0,0,0,0.5));
 }

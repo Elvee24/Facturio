@@ -301,10 +301,10 @@ header {
         grid-template-columns: 1fr;
     }
     .laptop { 
-        width: 90%; 
+        width: 100%;
     }
     .phone { 
-        display: none; 
+        width: 100%; 
     }
 
     .p-block { 

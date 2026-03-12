@@ -135,6 +135,16 @@ header {
     border-color: #FFF463;
 }
 
+.download-btn.android {
+    background-color: #a4c639;
+    border: 1px solid #a4c639;
+}
+
+.download-btn.android:hover {
+    background-color: #839e2e;
+    border-color: #839e2e;
+}
+
 .download-icon img {
     max-width: 20px; 
     width: 100%; 

@@ -116,15 +116,6 @@ header {
     background: var(--accent-hover); 
 }
 
-.download-btn.mac {
-    background-color: #B0B0B0;
-    border: 1px solid #666;
-}
-
-.download-btn.mac:hover {
-    background-color: #555;
-}
-
 .download-btn.linux {
     background-color: #1F1F1F;
     border: 1px solid #1F1F1F;
@@ -154,14 +145,9 @@ header {
 }
 
 .download-btn.windows .download-icon img {
-    box-shadow: 2px 2px 1px black !important;
-}
-
-.download-btn.windows .download-icon img {
     box-shadow: 2px 2px 1px rgba(0,0,0,0.5) !important;
 }
 
-.download-btn.mac .download-icon img,
 .download-btn.linux .download-icon img {
     max-width: 28px;
     filter: drop-shadow(2px 2px 1px rgba(0,0,0,0.5));
